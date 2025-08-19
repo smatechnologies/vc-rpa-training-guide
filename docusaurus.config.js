@@ -13,7 +13,7 @@ module.exports = {
     navbar: {
       title: 'Help',
       logo: {
-        alt: 'VisualCron Help Logo',
+        alt: 'Help Logo',
         src: 'img/logo.svg',
         href: 'https://help.smatechnologies.com',
       },
