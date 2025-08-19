@@ -1,8 +1,8 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'VisualCron Help',
+  title: 'RPA Help',
   tagline: 'VC RPA Training Guide',
-  url: 'https://help.visualcron.com',
+  url: 'https://help.smatechnologies.com',
   baseUrl: '/training/vc-rpa-training-guide/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -14,8 +14,8 @@ module.exports = {
       title: 'Help',
       logo: {
         alt: 'VisualCron Help Logo',
-        src: 'img/VisualCronBlue.svg',
-        href: 'https://help.visualcron.com',
+        src: 'img/logo.svg',
+        href: 'https://help.smatechnologies.com',
       },
     },
     footer: {
