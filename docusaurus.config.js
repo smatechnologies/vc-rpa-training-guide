@@ -1,8 +1,8 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'SMA Technologies Help',
-  tagline: 'VC Rpa Training Guide',
-  url: 'https://help.smatechnologies.com',
+  title: 'VisualCron Help',
+  tagline: 'VC RPA Training Guide',
+  url: 'https://help.visualcron.com',
   baseUrl: '/training/vc-rpa-training-guide/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -13,9 +13,9 @@ module.exports = {
     navbar: {
       title: 'Help',
       logo: {
-        alt: 'SMA Technologies Help Logo',
-        src: 'img/logo.svg',
-        href: 'https://help.smatechnologies.com',
+        alt: 'VisualCron Help Logo',
+        src: 'img/VisualCronBlue.svg',
+        href: 'https://help.visualcron.com',
       },
     },
     footer: {
