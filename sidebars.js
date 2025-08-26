@@ -3,6 +3,8 @@ module.exports = {
     'index',
     'first-steps',
     'web-macro',
+    'web-macro-interest-rate',
     'excel-robot-task',
+    'orchestrating-with-opcon',
   ],
 };

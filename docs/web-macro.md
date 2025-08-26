@@ -1,77 +1,90 @@
 ---
-sidebar_label: 'Web Macro'
+sidebar_label: 'Web Macro - Download File'
 hide_title: 'false'
 ---
 
 
-# Creating a Web Macro Task
+# Web Macro - Download File
+
+Create a Web Macro Task to download a file
+
+## Objective 
+
+Use an RPA Web Macro to download a file from a website
+
+:::tip [Walkthrough Video](../static/img/vs-web-macro-download-file.mp4)
+
+:::
+
+## Instructions 
+
+1. On the left, right-click and create a ‘container’ (Add folder to root) to categorize the workflow to be created. Name the folder as **TestJob**
+
+<a href="img/Picture1.png" target="_blank"><img src="img/Picture1.png" width="500" /></a>
+
+2. Toward the top, click **Add Job**
+
+<a href="img/Picture2.png" target="_blank"><img src="img/Picture2.png" width="500" /></a>
 
 
+3. Name the Job as **Quick Start Test**
 
-On the left, right-click and create a ‘container’ (Add folder to root) to categorize the workflow to be created.  
+<a href="img/Picture3.png" target="_blank"><img src="img/Picture3.png" width="500" /></a>
 
-For Ex: TestJob
+4. Select the **Tasks** tab
 
-![](../static/img/Picture1.png)
+<a href="img/Picture4.png" target="_blank"><img src="img/Picture4.png" width="500" /></a>
 
-Toward the top, click **Add Job**
+5. Click **Add > Net > Web Macro**
 
-![](../static/img/Picture2.png)
+<a href="img/Picture5.png" target="_blank"><img src="img/Picture5.png" width="500" /></a>
 
-Name the Job
+6. Select the **Web Macro** tab
 
-Ex: **Quick Start Test**
+<a href="img/Picture6.png" target="_blank"><img src="img/Picture6.png" width="500" /></a>
 
-![](../static/img/Picture3.png)
+7. Select the **Actions** tab
 
-Select the **Tasks** tab
+<a href="img/Picture7.png" target="_blank"><img src="img/Picture7.png" width="500" /></a>
 
-![](../static/img/Picture4.png)
+8. Select **Record** (Bottom right-hand corner of the window)
 
-Click **Add > Net > Web Macro**
+<a href="img/Picture8.png" target="_blank"><img src="img/Picture8.png" width="500" /></a>
 
-![](../static/img/Picture5.png)
+9. Enter the desired URL at the top and  browse to the page
 
-Select the **Web Macro** tab
+<a href="img/Picture9.png" target="_blank"><img src="img/Picture9.png" width="500" /></a>
 
-![](../static/img/Picture6.png)
+10. As you click through the webpage, a blue outline around the selected object will indicate that the step is saved. You will see the steps populate in the right Sequence frame as they are clicked.
+    - In this case, we are navigating to `https://github.com/smatechnologies`.
+    - Next click on the **opcon-web-installer** link.
+    - Scroll to and click the **latest release** link.
+    - Click the **OpConWebIntaller.zip** file link.
 
-Select the **Actions** tab
+<a href="img/Picture10.png" target="_blank"><img src="img/Picture10.png" width="500" /></a>
 
-![](../static/img/Picture7.png)
+11. Modify the folder and other parameters if necessary and click **OK**.
 
-Select **Record** (Bottom right-hand corner of the window)
+<a href="img/Picture11.png" target="_blank"><img src="img/Picture11.png" width="500" /></a>
 
-![](../static/img/Picture8.png)
+12. Click the **Stop** button in the bottom right hand corner of the client to stop the recording.
 
-Enter the desired URL at the top and  browse to the page
+<a href="img/Picture12.png" target="_blank"><img src="img/Picture12.png" width="500" /></a>
 
-![](../static/img/Picture9.png)
+13. Select **Yes** to save the recorded actions.
 
-As you click through the webpage, a blue outline around the selected object will indicate that the step is saved. You will see the steps populate in the right Sequence frame as they are clicked.
+<a href="img/Picture13.png" target="_blank"><img src="img/Picture13.png" width="500" /></a>
 
-![](../static/img/Picture10.png)
+14. Click on **Test Run** to test the workflow.
 
-Modify the folder and other parameters if necessary and click **OK**.
+<a href="img/Picture14.png" target="_blank"><img src="img/Picture14.png" width="500" /></a>
 
-![](../static/img/Picture11.png)
+15. Verify that the expected file was downloaded during the worklfow test run.
 
-Click the **Stop** button in the bottom right hand corner of the client to stop the recording.
+<a href="img/Picture15.png" target="_blank"><img src="img/Picture15.png" width="500" /></a>
 
-![](../static/img/Picture12.png)
+16. The Job and task are now saved to your queue.
 
-Select **Yes** to save the recorded actions.
+<a href="img/Picture16.png" target="_blank"><img src="img/Picture16.png" width="500" /></a>
 
-![](../static/img/Picture13.png)
 
-Click on **Test Run** to test the workflow.
-
-![](../static/img/Picture14.png)
-
-Verify that the expected file was downloaded during the worklfow test run.
-
-![](../static/img/Picture15.png)
-
-The Job and task are now saved to your queue.
-
-![](../static/img/Picture16.png)
