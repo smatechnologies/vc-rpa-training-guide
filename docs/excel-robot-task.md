@@ -7,6 +7,10 @@ hide_title: 'false'
 
 Use an Excel Task to pull Excel Cell data from a workbook and transfer it to a new/different workbook
 
+:::tip [Walkthrough Video](../static/img/vs-excel-robot.mp4)
+
+:::
+
 ## Instructions
 
 :::info Note
@@ -39,54 +43,53 @@ Depending on how your Windows Service is run, you may need to run the Excel Appl
 
 ## Create the Robot Job
 
-### Create a Variable
+### Create a New Job and a User Variable
 
 1. Launch the VisualCron Tray Client.
-2. Create a new Job and name it **excel-robot-task**
+2. Create a new Job and name it **excel-robot**
 3. Navigate to the **Main settings** tab.
-4. In the right hand corner of the Main Settings tab, click the **Job Variables** button.
+4. In the left hand corner of the Main Settings tab, click the **Variables** button.
 5. In the  Variables screen, click **Add**.
-6. Name the Variable **interest_rate_amegy**.
+6. Name the Variable **interest_rate**.
 7. Leave the Variable value blank.
 8. Click the **Add** button.
 
-### Create the RPA Task to Read the Cell
+### Create the RPA Task to Get Cell Data
 
-4. Select an Excel **Open Workbook** task from the left menu and drag it into the **Sequence** window.
-5. In the **File name** box enter the path to your created workbook (**rpasourcebook**).
-6. Select an **Excel Cell - Get Cell Value** task from the left menu and drag it into the **Sequence** window below the **Open Workbook** task.
-7. Click the **Click to select Excel element** link in the task window.
-8. With the source workbook and sheet in focus,click on the cell you wish to retrieve the value from.
-9. Hold down the CTRL button and left-click at the same time.
-10. Back in the Edit Task Screen - Verify the Cell Address.
-11. Select or verify the **Variable type** as **User**.
-12. Select or verify the **Variable** as **interest_rate_amegy**.
 
-### Create the RPA Task to Set the Cell 
+1. In the **Edit Job** screen, select the **Tasks** tab.
+2. Select an **Excel Cell - Get Cell** task.
+3. In the **Get Cell** edit screen, select the **Excel - Get cell** tab.
+4. In the **Select Excel file** line, enter or click to select the file path for the desired Excel workbook - in this instance use the path for the `rpasourcebook.xlsx` file previously created.
+5. In the **Cell Coordinates** section, select the desired cells by position, or reference - in this case use **Cell reference** `B2`.
+6. Select **OK** in the bottom right hand corner to save the task.
 
-1. Select an Excel **Open Workbook** task from the left menu and drag it into the **Sequence** window below the **Get Cell Value** task.
-2. In the **File name** box enter the path to your created workbook (**rpatargetbook**).
-3. Select an **Excel Cell - Set Cell Value** task from the left menu and drag it into the **Sequence** window below the **Open Workbook** task.
-4. Click the **Click to select Excel element** link in the task window.
-5. With the target workbook and sheet in focus, click on the cell you wish to set cell value on.
-6. Hold down the CTRL button and left-click at the same time.
-7. Back in the Edit Task Screen - Verify the Cell address.
-8. Select or verify the **Value** as the **User Variable** `{USERVAR(interest_rate_amegy)}`.
+### Create the RPA Task to Set the User Variable
 
-### Save the Excel File
+1. In the **Edit Job** screen, select the **Tasks** tab.
+2. Select an **Internal - Set User Variable** task.
+3. Click the checkbox for **Translate value to constant in Variable when running**.
+4. In the **Set User Variable** edit screen, select the **Set User Variable**  tab.
+5. Set the name of the desired Variable (in this instance use `interest_rate`).
+6. Set the value of the desired Variable (in this instance use `{TASK(PrevTask|StdOut)}`). This variable will call the value of the last task action in the Job, thus giving us the value of the cell retreived in the **Get Cell** action.
+7. Select **OK** in the bottom right hand corner to save the task.
 
-1. Select an Excel Workbook **Save Workbook** task from the left menu and drag it into the **Sequence** window below the **Set Cell Value** task.
-2. Click the **Click to select Excel element** link in the task window.
-3. Verify the Workbook name to save is correct.
+### Create the RPA Task to Set Cell Data
+
+1. In the **Edit Job** screen, select the **Tasks tab.
+2. Select an **Excel - Set Cell** task.
+3. In the **Set Cell** edit scren, select the **Excel - Set Cell** tab.
+4. In the **source** tab, for the input value, enter the name of the user variable created previously - in this instance use `{USERVAR(interest_rate)}`.
+5. Select the **File filter** subtab.
+6. In the **Include file mask** line, enter or click to select the desired target workbook - in this instance use the `rpatargetbook.xlsx` file previously created. The Folder path about should be auto-populated once the file is selected. 
+7. Select the **Target** subtab.
+8. Select the desired cell coordinated by position or reference - in this case use **Cell reference** `B2`.
+9. Select **OK** in the bottom right hand corner to save the task.
+
 
 ### Test the Robot
 
-1. Click **Test Run** in the bottom right hand corner of the Robot **Edit Taks** screen.
+1. In the main Client tray menu, highlight the excel-robot job and click **Run Job** in the actions menu above the job list.
 2. The Robot will run the sequence.
-3. Verify that the sequence has completed successfully by checking that the interest rate variable has been set in **rpatargetbook** cell **B2** and that it matches the value in **rpasourcebook** cell **B2**.
-
-### Save the Robot
-
-1. Click **OK** in the bottom right hand corner of the Robot **Edit Task** screen.
-2. Choose from **Save and Publish** or **Save as Draft**. In this case, choose **Save and Publish**.
-3. Click **OK** to acknowledge that the Robot has been saved and published.
+3. Each task should finish with an **Exit code** of `0`.
+4. Verify that the sequence has completed successfully by checking that the interest rate variable has been set in **rpatargetbook** cell **B2** and that it matches the value in **rpasourcebook** cell **B2**.

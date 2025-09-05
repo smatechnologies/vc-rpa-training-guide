@@ -5,11 +5,12 @@ hide_title: 'false'
 
 # Web Macro - Get Interest Rate
 
-Create a Web Macro Task to Pull an Interest Rate
-
-## Objective 
-
 Use an RPA Web Macro to pull an interest rate from a bank website
+
+
+:::tip [Walkthrough Video](../static/img/vs-web-macro-get-interest-rate.mp4)
+
+:::
 
 ## Instructions 
 
@@ -59,8 +60,8 @@ Observe that:
 
 1. Navigate to **Home Lending**.
 2. Click on 'View Purchase Rates', scroll to find the 30-year fixed rate.
-3. Right-click the rate and select Extract Data.
-4. On the **Extract data** tab, select and confirm the element (e.g., “InnterText: 6.75”) is correctly identified.
+3. Right-click the rate and select **Add Extract Data Action**.
+4. On the **Extract data** tab, select and confirm the element (e.g., “InnerText: 6.75”) is correctly identified.
 5. Select the **Destination** tab and set the destination to the 30 year fix rate variable.
 6. Click **OK** to confirm.
 7. **Stop** the recording.

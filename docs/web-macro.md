@@ -6,9 +6,6 @@ hide_title: 'false'
 
 # Web Macro - Download File
 
-Create a Web Macro Task to download a file
-
-## Objective 
 
 Use an RPA Web Macro to download a file from a website
 
