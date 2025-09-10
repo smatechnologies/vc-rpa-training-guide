@@ -5,10 +5,8 @@ hide_title: 'false'
 
 # First Steps
 
+To begin using VisualCron to build RPA Jobs, you will need to download, install, and configure the software. Below are links to the VisualCron download and OpCon RPA Documentation which will guide users through the installation process.
 
+#### [VisualCron Software Download](https://www.visualcron.com/download.aspx)
 
-### VisualCron Download Link: 
-•	https://smatechnologies.hosted-by-files.com/OpConPublicUtilities/VisualCron10.0.2.exe
-
-#### User Documentation: 
-•	https://help.smatechnologies.com/opcon/agents/opcon-rpa/
+#### [RPA Documentation](https://help.smatechnologies.com/opcon/agents/opcon-rpa/)
