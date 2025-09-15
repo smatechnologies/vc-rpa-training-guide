@@ -1,11 +1,11 @@
 ---
 sidebar_label: 'Excel Robot Task Exercise'
-hide_title: 'false'
+hide_title: 'true'
 ---
 
-# Creating an Excel Robot Task
+## Creating an Excel Robot Task
 
-Use an Excel Task to pull Excel Cell data from a workbook and transfer it to a new/different workbook
+#### Use an Excel Task to pull Excel Cell data from a workbook and transfer it to a new/different workbook
 
 :::tip [Walkthrough Video](../static/img/vs-excel-robot.mp4)
 

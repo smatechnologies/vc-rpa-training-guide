@@ -1,11 +1,11 @@
 ---
-sidebar_label: 'Web Macro - Get Interest Rate'
-hide_title: 'false'
+sidebar_label: 'Web Macro Exercise - Get Interest Rate'
+hide_title: 'true'
 ---
 
-# Web Macro - Get Interest Rate
+## Web Macro Exercise - Get Interest Rate
 
-Use an RPA Web Macro to pull an interest rate from a bank website
+#### Use an RPA Web Macro to pull an interest rate from a bank website
 
 
 :::tip [Walkthrough Video](../static/img/vs-web-macro-get-interest-rate.mp4)
@@ -14,17 +14,20 @@ Use an RPA Web Macro to pull an interest rate from a bank website
 
 ## Instructions 
 
+### Create the Job and Task
+
+1. In the RPA Tray Client, click **Add Job**.
+2. Within the new Job add a new **Web Macro Task**
 
 ### Create a User Variable
 
-1. In the RPA Tray Client, create a **New Web Macro Task**
-2. Navigate to the **Variables** section (bottom left of the interface).
-3. Click **Add a User Variable**.
-4. Name the variable: **30YearFixedRate**.
-5. Set the initial value to **TEST**.
-6. Click **Add** to create the variable.
-7. Confirm the variable appears with the correct name and value.
-8. Click **Close**.
+1. Navigate to the **Variables** section (bottom left of the interface).
+2. Click **Add a User Variable**.
+3. Name the variable: **30YearFixedRate**.
+4. Set the initial value to **TEST**.
+5. Click **Add** to create the variable.
+6. Confirm the variable appears with the correct name and value.
+7. Click **Close**.
 
 ### Record the Automation Steps
 

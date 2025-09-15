@@ -1,9 +1,9 @@
 ---
 sidebar_label: 'Web Macro Tasks'
-hide_title: 'false'
+hide_title: 'true'
 ---
 
-# Web Macro Tasks
+## Web Macro Tasks
 
 ### Web Macro Task Definition
 
@@ -14,16 +14,15 @@ perform actions such as clicking buttons or entering text.
 
 #### To create a Web Macro task in VisualCron:
 
+Within the Job screen, select the **Tasks** tab, click the **Add** button and select **Net --> Web Macro**.
+
+When the built in browser screen appears, enter the URL to navigate to and perform the desired actions within the browser.
+
+![](../static/img/vcrpa-url.png)
 
 To record actions, click the **Record** button at the bottom of the Web Macro Task screen.
 
 ![](../static/img/vcrpa-record.png)
-
-
-Within the Job screen, click the **Add** button and select **Net --> Web Macro**.
-When the built in browser screen appears, enter the URL to navigate to and perform the desired actions within the browser.
-
-![](../static/img/vcrpa-url.png)
 
 The Web Macro will capture each step and generate corresponding actions. 
 
@@ -31,9 +30,14 @@ To select a desired element within the page, right-click on the element and sele
 
 ![](../static/img/vcrpa-selectaction.png)
 
-With the desired Value selected, within the **Destination** tab, select the desired Job Variable or User Variable.
+For Web Macro Tasks that include data capture:
+* Right-click on the object to be captured and select the element that will be extracted.
 
 ![](../static/img/vcrpa-extraction.png)
+
+* Navigate to the **Destination** tab, select the desired Job Variable or User Variable.
+
+![](../static/img/vcrpa-webmacrovar.png)
 
 Stop the recording and save.
 

@@ -1,9 +1,9 @@
 ---
 sidebar_label: 'Orchestrating with OpCon'
-hide_title: 'false'
+hide_title: 'true'
 ---
 
-# Orchestrating with OpCon
+## Orchestrating with OpCon
 
 To build an OpCon Schedule and Job to orchestra RPA through VisualCron, there are a few steps that must be taken prior to setting up the job.
 
