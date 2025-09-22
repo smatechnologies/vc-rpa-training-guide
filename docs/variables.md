@@ -26,7 +26,7 @@ Note that the syntax of a VisualCron variable and an OpCon variable differ signi
 Defined within a specific job.
 Can be referenced inside or outside the job.
 Created/edited via the Edit Job screen.
-Stored locally to the job but visible in the Variables browser. [Job Variab...VisualCron]
+Stored locally to the job but visible in the Variables browser.
 
 #### Global Variables
 
